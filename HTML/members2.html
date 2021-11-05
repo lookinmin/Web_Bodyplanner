@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인신체정보 기입</title>
+  <link href="CSS/members2.css" rel="stylesheet">
+</head>
+<body>
+  <div id="whole">
+    <h2 id="member_info"><strong><사용자 정보입력></strong></h2><br>
+    <div class="info">
+      <p class="option">나이(Age) : </p>
+      <div class ="input_box">
+        <input type="number" min="1" id="age" value="age">
+      </div>
+    </div> 
+
+    <div class="info">
+      <p class="option">키(Height) : </p>
+      <div class ="input_box">
+        <input type="number" min="120" id="Height" value="Height">
+      </div>
+    </div> 
+
+    <div class="info">
+      <p class="option">체중(Weight) : </p>
+      <div class ="input_box">
+        <input type="number" min="10" id="Weight" value="Weight">
+      </div>
+    </div> 
+
+    <div class="info">
+      <p class="option">성별(Sex) :<span> <div class = "radio_shape">
+        <input type="radio" value="male" name="gender" class = "act">남자
+        <input type="radio" value="female" name="gender" class = "act">여자
+      </div></span> 
+      </p>
+    </div>
+    
+    <div class="info">
+      <p class="option">활동량 : </p>
+      <span>
+        <div class = "radio_shape">
+          <input type="radio" value="act1" name="activity" class="act"> 평소에 운동을 전혀 하지않음 <br>
+          <input type="radio" value="act2" name="activity" class="act"> 주 1~2회 정도 가벼운 운동 <br>
+          <input type="radio" value="act3" name="activity" class="act"> 주 3~4회 정도 적당한 운동 <br>
+          <input type="radio" value="act4" name="activity" class="act"> 주 5~6회 정도 고강도 운동 <br>
+          <input type="radio" value="act5" name="activity" class="act"> 아마추어 및 프로 선수 <br>
+        </div>
+      </span>
+    </div>
+
+    <div class="info">
+      <p class="option">운동 목표 : </p>
+      <span>
+        <div class = "radio_shape">
+          <input type="radio" value="diet" name="goal" class="act"> 다이어트 <br>
+          <input type="radio" value="massup" name="goal" class="act"> 린매쓰업 <br>
+          <input type="radio" value="bulk" name="goal" class="act"> 벌크업 <br>
+        </div>
+      </span>
+    </div>
+    <div align="right">
+      <button id="btn_complete" value="complete" type="submit" title="기초대사량 및 활동대사량 확인">가입 완료</button>
+    </div>
+  </div>
+
+  <script>
+    let complete = document.getElementById("btn_complete");
+    complete.addEventListener("click", function(){
+        location.href="Start page.html";
+    });
+  </script>
+</body>
+</html>

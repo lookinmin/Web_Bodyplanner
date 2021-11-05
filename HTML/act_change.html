@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>활동량 수정</title>
+  <link href="CSS/members2.css" rel="stylesheet">
+  <script src="JQuery/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="info">
+    <p class="option">활동량 : </p>
+    <span>
+      <div class = "radio_shape">
+        <input type="radio" value="act1" name="activity" class="act"> 평소에 운동을 전혀 하지않음 <br>
+        <input type="radio" value="act2" name="activity" class="act"> 주 1~2회 정도 가벼운 운동 <br>
+        <input type="radio" value="act3" name="activity" class="act"> 주 3~4회 정도 적당한 운동 <br>
+        <input type="radio" value="act4" name="activity" class="act"> 주 5~6회 정도 고강도 운동 <br>
+        <input type="radio" value="act5" name="activity" class="act"> 아마추어 및 프로 선수 <br>
+      </div>
+    </span>
+  </div>
+
+  <button type="submit" id="act_change">SAVE</button>
+  <script>
+    let text1 = opener.document.getElementById("#now_act");
+
+    $('#act_change').click(function(){
+      self.close();
+      var act_text = radioText();
+    })
+
+    function radioText(){
+      let result;
+      result = $('input:radio[name="activity"]:checked').val();  //체크된 라디오 value값 가져오기
+      switch (result){
+        case "act1":
+          result = "평소에 운동을 전혀 하지않음";
+          break;
+        case "act2": 
+          result = "주 1~2회정도 가벼운 운동";
+          break;
+        case "act3":
+          result = "주 3~4회정도 적당한 운동";
+          break;
+        case "act4":
+          result = "주 5~6회정도 고강도 운동";
+          break;
+        case "act5":
+          result = "아마추어 및 프로선수";
+          break;
+      }
+      return result;
+    }
+  </script>
+</body>
+</html>

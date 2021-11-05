@@ -1,0 +1,611 @@
+body {
+  margin: 0;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: whitesmoke;
+}
+#calendar {
+  background-color: whitesmoke;
+}
+.whole {
+  position: relative;
+  margin-top: -30px;
+  background-color: #1e1f21;
+}
+#startpage_img {
+  display: flex;
+  position: relative;
+}
+#main_pic {
+  display: inline-block;
+  position: absolute;
+  left: 50px;
+  top: 24px;
+}
+#main_pic:hover {
+  cursor: pointer;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+}
+.menu1 {
+  width: 120px;
+  color: #01ffff;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  padding: 10px 5px;
+  position: absolute;
+  margin: 1% 5%;
+  left: 8%;
+  top: 5px;
+}
+.menu1:hover {
+  color: #01ffff;
+  cursor: pointer;
+  animation-name: swing-in-top-fwd;
+  animation-duration: 0.8s;
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+}
+.menu2 {
+  width: fit-content;
+  color: #01ffff;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  padding: 10px 5px;
+  position: absolute;
+  left: 19%;
+  top: 5px;
+  margin: 1% 5%;
+}
+.menu2:hover {
+  color: #01ffff;
+  cursor: pointer;
+  animation-name: swing-in-top-fwd;
+  animation-duration: 0.8s;
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+}
+.menu3 {
+  width: 120px;
+  color: #01ffff;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  padding: 10px 5px;
+  position: absolute;
+  left: 32%;
+  top: 5px;
+  margin: 1% 5%;
+}
+.menu3:hover {
+  color: #01ffff;
+  cursor: pointer;
+  animation-name: swing-in-top-fwd;
+  animation-duration: 0.8s;
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+}
+.menu4 {
+  width: 120px;
+  color: #01ffff;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  padding: 10px 5px;
+  position: absolute;
+  left: 46%;
+  top: 5px;
+  margin: 1% 5%;
+}
+.menu4:hover {
+  color: #01ffff;
+  cursor: pointer;
+  animation-name: swing-in-top-fwd;
+  animation-duration: 0.8s;
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+}
+.menu5 {
+  width: 120px;
+  color: #01ffff;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  padding: 10px 5px;
+  position: absolute;
+  left: 86%;
+  top: 8px;
+  margin: 1% 5%;
+}
+.menu5:hover {
+  color: #01ffff;
+  cursor: pointer;
+  animation-name: swing-in-top-fwd;
+  animation-duration: 0.8s;
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+}
+.menu6 {
+  width: 360px;
+  height: 20px;
+  padding: 10px 5px;
+  position: absolute;
+  border: 2px solid #01ffff;
+  left: 60%;
+  top: 15px;
+  margin: 1% 5%;
+}
+#search {
+  font-size: 16px;
+  width: 330px;
+  padding: 10px;
+  border: 0px;
+  outline: none;
+  float: left;
+  margin-top: -9px;
+  color: #01ffff;
+  background-color: #1e1f21;
+}
+#search_pic {
+  width: 50px;
+  height: 41px;
+  margin-top: -39px;
+  margin-right: -8px;
+  border: 0px;
+  background: #01ffff;
+  outline: none;
+  float: right;
+  color: #ffffff;
+  cursor: pointer;
+}
+#menu_line {
+  border: 2px solid #01ffff;
+  position: absolute;
+  left: 0px;
+  width: 99%;
+  top: 95px;
+  margin-bottom: 0px;
+}
+.swing-in-top-fwd {
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+@keyframes swing-in-top-fwd {
+  0% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+/*여기까지 메뉴바------------------------------------------------------*/
+.wrapper {
+  display: grid;
+  margin-top: 7%;
+  grid-template-columns: 3fr 1.2fr;
+  grid-template-rows: 1.8fr 1fr 1fr;
+  margin-bottom: 0px;
+  grid-gap: 5px;
+}
+.item1 {
+  /*달력*/
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+.item2 {
+  height: 100%; /*선택날짜의 식단보여주는 창*/
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: grid;
+  border: 1px solid blue;
+  grid-row-gap: 1%;
+  grid-template-rows: 14% 54% 29%;
+  margin-bottom: 20px;
+}
+.item3 {
+  /*해당 날짜에 식단 추가*/
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border: 1px solid red; /*선택날짜의 식단보여주는 창*/
+  height: 600px;
+  margin-bottom: 20px;
+}
+
+.item4 {
+  /*즐겨찾기 한 식단 리스트*/
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border: 1px solid blue; /*선택날짜의 식단보여주는 창*/
+  height: 500px;
+  display: grid;
+  grid-template-rows: 100px 300px 100px;
+  margin-bottom: 20px;
+}
+.item5 {
+  /*Body Planner 전체 식단리스트*/
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  border: 1px solid black;
+  height: 600px; /*선택날짜의 식단보여주는 창*/
+  margin-bottom: 20px;
+}
+
+/*전체 그리드------------------------------------------------------*/
+
+#date_click {
+  height: 15%;
+  /* background: rgb(255, 244, 210); */
+  display: grid;
+  font-size: 2em;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid red;
+}
+#date_click:hover {
+  cursor: pointer;
+}
+
+#new_box {
+  position: relative;
+  color: black;
+  width: 20px;
+  background-color: red;
+  height: 20px;
+  border: 1px solid red;
+}
+
+.day {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.day_meal {
+  width: 18%;
+  height: 100%;
+  border: 1px solid orange;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 20% 70% 10%;
+}
+
+.day_meal div:not(.delete_btn) {
+  border-radius: 20px;
+}
+
+.delete_btn {
+  border-top: 2px solid rosybrown;
+  display: grid;
+}
+
+.btn-close {
+  justify-self: center;
+  align-self: center;
+}
+
+.btn-outline-warning {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.add_btn {
+  border-radius: 20px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  height: 20%;
+  width: 8%;
+  font-size: xx-large;
+  background-color: whitesmoke;
+  border: 3px dotted rgb(163, 163, 163);
+  background-image: url("plus.png");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.add_btn:hover {
+  transition-duration: 1s;
+  background-color: rgb(190, 189, 189);
+  border: 3px dotted whitesmoke;
+}
+
+/*입력한 식단 출력------------------------------------------------------*/
+
+.meal_box {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-rows: 10% 90%;
+  grid-template-columns: 25% 25% 25% 25%;
+  /* margin-bottom: 50px; */
+}
+
+.meal_txt {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: x-large;
+  height: 100%;
+  border: 1px solid red;
+}
+.carbo_box,
+.pro_box,
+.fat_box,
+.other_box {
+  padding: 5% 10%;
+  font-size: 10px;
+  font-weight: bolder;
+  height: 100%;
+  border: 2px solid blue;
+}
+
+.meal_div {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+
+.carbo_name,
+.pro_name,
+.fat_name,
+.other_name {
+  padding-top: 5px;
+}
+
+.carbo_num input {
+  width: 90%;
+}
+.pro_num input {
+  width: 90%;
+}
+.fat_num input {
+  width: 90%;
+}
+.other_num input {
+  width: 90%;
+}
+
+.other_box {
+  display: grid;
+  grid-template-rows: 90% 10%;
+}
+.save_btn {
+  width: 80px;
+  justify-self: right;
+}
+
+.save_btn button {
+  font-size: 20px;
+}
+/*식단 추가하는 박스------------------------------------------------------*/
+
+.user_btn {
+  border: 2px solid green;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.user_input {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+.user_input div {
+  border: 1px solid yellow;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: medium;
+}
+.user_input input {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.link_save {
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+
+.user_link {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.user_save {
+  padding: 10px 10px;
+}
+/*사용자가 직접 식단 입력------------------------------------------------------*/
+
+#sun_font {
+  color: red;
+}
+#sat_font {
+  color: blue;
+}
+
+/* .save_btn2 button{
+  width: 20%;
+  float: right;
+} */
+/*개수 입력 버튼------------------------------------------------------*/
+/* .quantity {
+  position: relative;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]
+{
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  width: 100%;
+  height: 35px;
+  line-height: 1.65;
+  float: left;
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  border: 1px solid blue;
+  background-color: orchid;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: relative;
+  height: 35px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid green;
+  background-color: palegreen;
+  width: 20px;
+  color: #333;
+  font-size: 13px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+  line-height: 1.7;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  border-bottom: 1px solid red;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  bottom: -1px;
+  height: 50%;
+} */
+/*개수 입력 버튼------------------------------------------------------*/
+
+/*식단 입력------------------------------------------------------*/
+
+.show_date {
+  border: 1px solid orange;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.show_meal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid green;
+}
+
+.meal_print {
+  width: 18%;
+  height: 100%;
+  border: 1px solid orange;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
+
+.show_txt {
+  border-radius: 20px;
+  border: 1px solid blue;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: medium;
+}
+
+.total {
+  border: 1px solid red;
+  display: grid;
+  grid-template-rows: 25% 75%;
+}
+
+.date_print {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: medium;
+}
+
+.total_nutri {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 25% 25% 25% 25%;
+}
+
+.total_nutri div {
+  border: 1px solid yellow;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: medium;
+}
+
+#first_meal {
+  border: 1px solid aqua;
+}

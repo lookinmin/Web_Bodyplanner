@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/semantic.css">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/main.min.css" rel="stylesheet">
+  <script src="JS/main.js"></script>
+  <script src="jQuery/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="css/calendar.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Start Page.html"><img src="images/head2.jpg" width="150px" height="100%"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="Meal.html" style="font-size: 20px;">Meal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exer.html" style="font-size: 20px;">Exercise</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" style="font-size: 20px;">Calendar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="My_info.html" style="font-size: 20px;">My Info</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="row mb-3">
+    <div class="col-md-8 themed-grid-col">
+      <div id='calendar'></div>
+    </div>
+    <div class="col-6 col-md-4 themed-grid-col">
+      <div class="item2">
+        <div class="show_date"></div>
+        <div class="show_meal">
+          <div class="meal_print">
+            <div class="show_txt">1st Meal</div>
+            <div class="meal_list"></div>
+          </div>
+          <div class="meal_print">
+            <div class="show_txt">2nd Meal</div>
+            <div class="meal_list"></div>
+          </div>
+        </div>
+        <div class="total">
+          <div class="date_print">Total Nutrition</div>
+          <div class="total_nutri">
+            <div class="nutri_txt">Total Calorie</div>
+            <div id="total_kcal"></div>
+            <div class="nutri_txt">Total Carbo</div>
+            <div id="total_carbo"></div>
+            <div class="nutri_txt">Total Pro</div>
+            <div id="total_pro"></div>
+            <div class="nutri_txt">Total Fat</div>
+            <div id="total_fat"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-8 themed-grid-col">
+      <div class="item3">
+        <div id="date_click" onclick="Today()">
+        </div>
+        <div class="day">
+          <div class="day_meal">
+            <div class="day_btn"><button type="button" class="btn btn-outline-warning" onclick="AppendFirst()">1st Meal</button></div>
+            <div class="day_print"></div>
+          </div>
+          <div class="day_meal">
+            <div class="day_btn"><button type="button" class="btn btn-outline-warning" onclick="AppendSecond()">2nd Meal</button></div>
+            <div class="day_print"></div>
+          </div>
+          <input type="button" class="add_btn" onclick="CreateNewDayMeal()">
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 themed-grid-col">
+      <div class="item4">
+        <h2>즐겨찾기한 식단 리스트</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-8 themed-grid-col">
+      <div class="item5">
+        <div class="meal_box">
+          <div class="meal_txt">탄수화물</div>
+          <div class="meal_txt">단백질</div>
+          <div class="meal_txt">지방</div>
+          <div class="meal_txt">기타</div>
+          <form class="carbo_box">
+            <div class="meal_div">
+              <div class="carbo_name"></div>
+              <div class="carbo_num"><input type="button" disabled style="border: 0;outline:0; color: black;" value="개수"></div>
+            </div>
+            <div class="meal_div">
+              <div class="carbo_name">현미밥</div>
+              <div class="carbo_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="carbo_name">흰쌀밥</div>
+              <div class="carbo_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="carbo_name">통밀빵</div>
+              <div class="carbo_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="carbo_name">식빵</div>
+              <div class="carbo_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="carbo_name">고구마</div>
+              <div class="carbo_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="carbo_name">감자</div>
+              <div class="carbo_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="carbo_name">바나나</div>
+              <div class="carbo_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="carbo_name">단호박</div>
+              <div class="carbo_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="carbo_name">오트밀</div>
+              <div class="carbo_num"><input type="number" min="0" max="10"></div>
+            </div>
+          </form>
+          <form class="pro_box">
+            <div class="meal_div">
+              <div class="carbo_name"></div>
+              <div class="carbo_num"><input type="button" disabled style="border: 0;outline:0; color: black;" value="개수"></div>
+            </div>
+            <div class="meal_div">
+              <div class="pro_name">닭가슴살</div>
+              <div class="pro_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="pro_name">훈제 닭가슴살</div>
+              <div class="pro_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="pro_name">닭가슴살 스테이크</div>
+              <div class="pro_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="pro_name">닭가슴살 샐러드</div>
+              <div class="pro_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="pro_name">소 등심</div>
+              <div class="pro_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="pro_name">소 부채살</div>
+              <div class="pro_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="pro_name">돼지 목살</div>
+              <div class="pro_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="pro_name">돼지 삼겹살</div>
+              <div class="pro_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="pro_name">계란</div>
+              <div class="pro_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="pro_name">프로틴</div>
+              <div class="pro_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="pro_name">훈제 연어</div>
+              <div class="pro_num"><input type="number" min="0" max="10"></div>
+            </div>
+          </form>
+          <form class="fat_box">
+            <div class="meal_div">
+              <div class="carbo_name"></div>
+              <div class="carbo_num"><input type="button" disabled style="border: 0;outline:0; color: black;" value="개수"></div>
+            </div>
+            <div class="meal_div">
+              <div class="fat_name">아보카도</div>
+              <div class="fat_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="fat_name">슬라이즈 치즈</div>
+              <div class="fat_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="fat_name">우유</div>
+              <div class="fat_num"><input type="number" min="0" max="10"></div>
+            </div>
+            <div class="meal_div">
+              <div class="fat_name">그릭 요거트</div>
+              <div class="fat_num"><input type="number" min="0" max="10"></div>
+            </div>
+          </form>
+          <form class="other_box">
+            <div class="other_list">
+              <div class="meal_div">
+                <div class="carbo_name"></div>
+                <div class="carbo_num"><input type="button" disabled style="border: 0;outline:0; color: black;" value="개수"></div>
+              </div>
+              <div class="meal_div">
+                <div class="other_name">견과류</div>
+                <div class="other_num"><input type="number" min="0" max="10"></div>
+              </div>
+              <div class="meal_div">
+                <div class="other_name">사과</div>
+                <div class="other_num"><input type="number" min="0" max="10"></div>
+              </div>
+              <div class="meal_div">
+                <div class="other_name">에너지바</div>
+                <div class="other_num"><input type="number" min="0" max="10"></div>
+              </div>
+              <div class="meal_div">
+                <div class="other_name">프로틴바</div>
+                <div class="other_num"><input type="number" min="0" max="10"></div>
+              </div>
+              <div class="meal_div">
+                <div class="other_name">BCAA</div>
+                <div class="other_num"><input type="number" min="0" max="10"></div>
+              </div>
+            </div>
+            <div class="save_btn">
+              <button type="button" class="btn btn-outline-warning" onclick="SaveMeal()">SAVE</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 themed-grid-col">
+      <div class="item4">
+        <div class="user_btn">클릭해서 직접 식단을 입력하세요</div>
+        <div class="user_input">
+          <div class="input_txt">이름</div>
+          <div class="input_name">
+            <input type="text" class="input_name">
+          </div>
+          <div class="input_txt">총 칼로리</div>
+          <div class="input_kcal">
+            <input type="number" class="input_kcal">
+          </div>
+          <div class="input_txt">탄수화물 함량</div>
+          <div class="input_carbo">
+            <input type="number" class="input_carbo">
+          </div>
+          <div class="input_txt">단백질 함량</div>
+          <div class="input_pro">
+            <input type="number" class="input_pro">
+          </div>
+          <div class="input_txt">지방 함량</div>
+          <div class="input_fat">
+            <input type="number"class="input_fat">
+          </div>
+        </div>
+        <div class="link_save">
+          <div class="user_link">
+            <a href="https://www.fatsecret.kr/%EC%B9%BC%EB%A1%9C%EB%A6%AC-%EC%98%81%EC%96%91%EC%86%8C/" 
+        style="text-decoration: none; color: #1e1f21;font-weight: bolder;" target="_blank" title="웹사이트 바로가기">Fatsecret 바로가기</a>
+          </div>
+          <div class="user_save">
+            <button type="button" class="btn btn-outline-warning" onclick="UserIuputSave()">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="JS/calendar.js"></script>
+
+</body>
+
+</html>

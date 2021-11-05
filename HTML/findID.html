@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아이디 찾기</title>
+  <link href="css/findID.css" rel="stylesheet">
+  <style>
+    .id_form {
+      position: absolute;
+      width: 600px;
+      border: 1px solid black;
+      height: 400px;
+      padding: 30px, 20px;
+      background-color: #1e1f21;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 15px;
+    }
+
+    .email_form {
+      border-bottom: 2px solid #adadad;
+      margin: 80px;
+      margin-bottom: 30px;
+      padding: 5px;
+    }
+
+    #email {
+      width: 100%;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 16px;
+      height: 25px;
+      background: none;
+    }
+
+    #btn {
+      position: relative;
+      left: 40%;
+      transform: translateX(-50%);
+      margin-bottom: 40px;
+      width: 80%;
+      height: 40px;
+      background: linear-gradient(125deg, #81ecec, #6c5ce7, #81ecec);
+      background-position: left;
+      background-size: 200%;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: 0.4s;
+      display: inline;
+    }
+
+    #find_pw {
+      position: static;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="id_form">
+    <h2 style="color: #01ffff;">아이디 찾기</h2>
+    <div class="email_form">
+      <input type="email" id="email" placeholder="E-mail">
+    </div>
+    <button type="button" , id="btn">ID 받기</button>
+    <div id="find_pw" style="color: #adadad;">비밀번호를 잊어버리셨나요?
+      <a href="FindPW.html" style="color: #adadad;" target="_blank">비밀번호 찾기</a>
+    </div>
+  </div>
+</body>
+
+</html>

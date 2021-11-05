@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>운동정보</title>
+  <link href="CSS/exer.css" rel="stylesheet">
+  <script src="JQuery/jquery-3.6.0.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/semantic.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <img id="side_title" src="images/menu.png" width="35px" height="auto" style="cursor: pointer; margin-right: 30px;" onclick="openNav()"> 
+      <a class="navbar-brand" href="Start_Page.html"><img src="images/head2.jpg" width="150px" height="100%"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="Meal.html" style="font-size: 20px;">Meal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exer.html" style="font-size: 20px;">Work-Out</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" style="font-size: 20px;">Calendar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="My_info.html" style="font-size: 20px;">My Info</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class ="wrapper">
+    <div class ="main_item1">
+      <div class ="item1">
+        <embed src="https://www.youtube.com/embed/x7wFk7KZhGQ" id = "youtube">
+      </div>
+      <div class ="item2">
+        <p id="title_Exer_eng">Title Exer</p>
+      </div>
+      <div class="item3">
+        <p id="video_title"><a href = "https://www.youtube.com/" id = "target_url" target="blank">More Video</a></p>
+      </div>
+    </div>
+
+    <div class ="main_item2">
+      <div class="item4">
+      </div>
+      <div class="item5">
+        <h3 id="title_kinds"><span id="work_name">운동 이름</span>&nbsp 활성근<br></h3>
+        <p id="kinds">운동을 선택해주세요 :)</p>
+      </div>
+      <div class="item6">
+        <img id="muscle_pic" src="./muscle/back/1.jpg">
+      </div>
+      <div class="item7">
+        <h3 id="title_recommend">추천 운동 강도<br></h3>
+        <p id="recommend">운동을 선택해주세요<br></p>
+      </div>  
+    </div>
+
+    <div class= "main_item3"></div>
+  </div>
+  
+  <div id="mySidenav" class="sidenav">
+    <a class="closebtn" onclick="closeNav()"><img class="exit_btn" src="images/exit.jpg"></a>
+      <div class="ul_exer" id="Back" onclick="BackList()">등</div>
+      <div class="ul_exer" id="Chest" onclick="ChestList()">가슴</div>
+      <div class="ul_exer" id="Leg" onclick="LegList()">하체</div>
+      <div class="ul_exer" id="Shoulder" onclick="ShoulderList()">어깨</div>
+      <div class="ul_exer" id="Arm" onclick="ArmList()">팔</div>
+      <div class="ul_exer" id="Abs" onclick="AbsList()">복근</div>
+      <div class="ul_exer" id="Oxy" onclick="OxyList()">유산소</div>
+  </div>
+
+  <div class="back_list">
+    <a class="closebtn" onclick="closeNav2()"><img class="exit_btn2" src="images/exit.jpg"></a>
+    <ul class="back" style="list-style-type: none;">
+      <li class="food_ul">풀업</li> <!--1,2-->
+      <li class="food_ul">친업</li> <!--1,2-->
+      <li class="food_ul">랫 풀다운</li> <!--1,2-->
+      <li class="food_ul">암 풀다운</li> <!--,2-->
+      <li class="food_ul">루마니안 <br>데드리프트</li> <!--1,2-->
+      <li class="food_ul">바벨 로우</li> <!--1,2-->
+      <li class="food_ul">시티드 로우</li> <!--1,2-->
+      <li class="food_ul">덤벨 로우</li> <!--1,2-->
+      <li class="food_ul">T-Bar 로우</li> <!--1,2-->
+      <li class="food_ul">인버티드 로우</li> <!--1,2-->
+    </ul>
+  </div>
+
+  <div class="chest_list">
+    <a class="closebtn" onclick="closeNav2()"><img class="exit_btn2" src="images/exit.jpg"></a>
+    <ul class="chest" style="list-style-type: none;">
+      <li class="food_ul">벤치 프레스</li> <!--1,2-->
+      <li class="food_ul">인클라인 <br>벤치 프레스</li> <!--,2-->
+      <li class="food_ul">디클라인 <br>벤치 프레스</li> <!--,2-->
+      <li class="food_ul">덤벨 프레스</li> <!--,2-->
+      <li class="food_ul">인클라인 <br>덤벨 프레스</li> <!--,2-->
+      <li class="food_ul">디클라인 <br>덤벨 프레스</li> <!--,2-->
+      <li class="food_ul">딥스</li> <!--,2-->
+      <li class="food_ul">체스트 <br>프레스 머신</li> <!--,2-->
+      <li class="food_ul">풀오버</li> <!--,2-->
+      <li class="food_ul">체스트 플라이</li> <!--,2-->
+      <li class="food_ul">케이블 <br>크로스오버</li> <!--,2-->
+      <li class="food_ul">스퀴즈 프레스</li> 
+      <li class="food_ul">푸쉬업</li> <!--,2-->
+    </ul>
+  </div>
+
+  <div class="leg_list">
+    <a class="closebtn" onclick="closeNav2()"><img class="exit_btn2" src="images/exit.jpg"></a>
+    <ul class="leg" style="list-style-type: none;">
+      <li class="food_ul">데드리프트</li> <!--,2-->
+      <li class="food_ul">스쿼트</li> <!--1,2-->
+      <li class="food_ul">핵 스쿼트</li> <!--,2-->
+      <li class="food_ul">레그 프레스</li> <!--1,2-->
+      <li class="food_ul">런지</li> <!--,2-->
+      <li class="food_ul">레그 익스텐션</li> <!--,2-->
+      <li class="food_ul">레그 컬</li> <!--,2-->
+      <li class="food_ul">힙 쓰러스트</li>  <!--,2-->
+      <li class="food_ul">힙 어덕션</li> <!--,2-->
+      <li class="food_ul">카프레이즈</li> <!--,2-->
+    </ul>
+  </div>
+
+  <div class="shoulder_list">
+    <a class="closebtn" onclick="closeNav2()"><img class="exit_btn2" src="images/exit.jpg"></a>
+    <ul class="shoulder" style="list-style-type: none;">
+      <li class="food_ul">사이드 <br>레터럴 레이즈</li> <!--,2-->
+      <li class="food_ul">머신 숄더프레스</li> <!--,2-->
+      <li class="food_ul">오버헤드 프레스</li> <!--,2-->
+      <li class="food_ul">덤벨 숄더프레스</li> <!--,2-->
+      <li class="food_ul">프론트 레이즈</li> <!--,2-->
+      <li class="food_ul">벤트오버 <br>레터럴 레이즈</li> <!--,2-->
+      <li class="food_ul">페이스 풀</li> <!--,2-->
+      <li class="food_ul">케이블 <br>리버스 플라이</li> <!--,2-->
+      <li class="food_ul">업라이트 로우</li> <!--,2-->
+      <li class="food_ul">슈러그</li> <!--,2-->
+      <li class="food_ul">리버스 <br>펙 덱 플라이</li> <!--,2-->
+    </ul>
+  </div>
+
+  <div class="arm_list">
+    <a class="closebtn" onclick="closeNav2()"><img class="exit_btn2" src="images/exit.jpg"></a>
+    <p class="division">-----------이두-----------</p>
+    <ul class="arm" style="list-style-type: none;">
+      <li class="food_ul">덤벨 컬</li> <!--,2-->
+      <li class="food_ul">바벨 컬</li> <!--,2-->
+      <li class="food_ul">해머 컬</li> <!--,2-->
+      <li class="food_ul">리버스 컬</li> <!--,2-->
+      <li class="food_ul">프리쳐 컬</li> <!--,2-->
+      <li class="food_ul">컨센트레이션 컬</li> <!--,2-->
+      <li class="food_ul">케이블 컬</li> <!--,2-->
+      <li class="food_ul">케이블 해머컬</li> <!--,2-->
+      <p class="division">-----------삼두-----------</p>
+      <li class="food_ul">케이블 푸쉬다운</li> <!--,2-->
+      <li class="food_ul">케이블 로프다운</li> <!--,2-->
+      <li class="food_ul">케이블 <br>오버헤드 익스텐션</li> <!--,2-->
+      <li class="food_ul">덤벨 킥 백</li> <!--,2-->
+      <li class="food_ul">라잉 트라이셉 <br>익스텐션</li> <!--,2-->
+      <li class="food_ul">오버헤드 익스텐션</li> <!--,2-->
+    </ul>
+  </div>
+
+  <div class="abs_list">
+    <a class="closebtn" onclick="closeNav2()"><img class="exit_btn2" src="images/exit.jpg"></a>
+    <ul class="abs" style="list-style-type: none;">
+      <li class="food_ul">크런치</li>
+      <li class="food_ul">리버스 크런치</li> <!--,2-->
+      <li class="food_ul">레그 레이즈</li>
+      <li class="food_ul">행잉 <br>레그 레이즈</li>
+      <li class="food_ul">행잉 <br>니 레이즈</li> <!--,2-->
+      <li class="food_ul">트위스트 <br>크런치</li> <!--1, -->
+      <li class="food_ul">케이블 크런치</li> <!--,2-->
+      <li class="food_ul">사이드 크런치</li> <!--,2-->
+      <li class="food_ul">플랭크</li> <!--,2-->
+    </ul>
+  </div>
+
+  <div class="oxy_list">
+    <a class="closebtn" onclick="closeNav2()"><img class="exit_btn2" src="images/exit.jpg"></a>
+    <ul class ="oxy" style="list-style-type: none;">
+      <li class="food_ul">런닝머신</li>
+      <li class="food_ul">사이클</li>
+      <li class="food_ul">스텝밀 머신</li>
+      <li class="food_ul">줄넘기</li>
+    </ul>
+  </div>
+
+  <script src="JS/exer.js"></script>
+</body>
+</html>

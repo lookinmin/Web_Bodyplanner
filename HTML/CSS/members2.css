@@ -1,0 +1,100 @@
+#whole{
+  display: grid;
+  margin: 0 auto;                   
+  position: relative;
+  width: max-content;
+  height: 100%;
+}
+
+#member_info{
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: -10px;
+}
+
+#age{
+  display: inline-flex;
+  width: 100px;
+  height: auto;
+  font-size: 20px;
+  position: relative;
+}
+#Height{
+  display: inline-flex;
+  width: 100px;
+  height: auto;
+  font-size: 20px;
+  position: relative;
+}
+#Weight{
+  display: inline-flex;
+  width: 100px;
+  height: auto;
+  font-size: 20px;
+  position: relative;
+}
+
+
+.act{
+  padding: 10px;
+  margin: 10px;
+}
+
+.info{
+  display: inline-flex;
+  margin : 10px 0px 0px;
+  padding:10px;
+}
+
+.input_box{
+  padding: auto 10px 10px auto;
+  margin: 20px 10px 10px auto;
+}
+
+.option{
+  font-size: 23px;
+  margin: 15px 15px 8px;
+  font-weight: 550;
+  text-align: left;
+}
+
+.radio_shape{
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.radio_shape input.act{
+  vertical-align:auto;
+  width: 18px;
+  height: 18px;
+  padding: 0px;
+}
+
+#btn_complete{
+  display: block;
+  background-color: aliceblue;
+  border:steelblue;
+  border-style:solid;
+  margin: 15px 0px 0px 10px;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  width: fit-content;
+  height: 40px;
+  float: right;
+}
+
+#act_change{
+  display: block;
+  position: relative;
+  justify-content: center;
+  left: 45%;
+  margin-top: 10%;
+  font-size: 20px;
+  border: aliceblue;
+  border-width: 3px;
+  border-style: groove;
+  background-color: whitesmoke;
+}

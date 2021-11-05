@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.6fr;
+  margin-top: 5%;
+  margin-left: 35%;
+}
+
+.input_box {
+  height: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  width: 250px;
+  border: none;
+  outline-width: 1px;
+  outline-color: orange;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.input_box2 {
+  height: 30px;
+  font-size: 23px;
+  font-weight: bold;
+  width: 80px;
+  border: none;
+  outline-width: 1px;
+  outline-color: orange;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.input_box3 {
+  height: 30px;
+  font-size: 23px;
+  font-weight: bold;
+  width: 35px;
+  border: none;
+  outline-width: 1px;
+  outline-color: orange;
+  background-color: whitesmoke;
+  color: black;
+}
+.input_box4 {
+  height: 30px;
+  font-size: 25px;
+  font-weight: bold;
+  width: 320px;
+  border: none;
+  outline-width: 1px;
+  outline-color: orange;
+  background-color: whitesmoke;
+  color: black;
+}
+
+#now_age {
+  text-align: left;
+}
+
+.item1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+#title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 11%;
+  margin-top: 10px;
+  color: orange;
+}
+
+.item2 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.sub_title {
+  font-size: 25px;
+  font-weight: bold;
+  width: fit-content;
+  margin-top: 4%;
+  color: orange;
+}
+.sub_title2 {
+  display: inline-flex;
+  font-size: 25px;
+  font-weight: bold;
+  width: 250px;
+  margin-top: 4%;
+  color: orange;
+}
+.change {
+  display: block;
+  position: static;
+  cursor: pointer;
+  float: right;
+  margin-right: 60%;
+  margin-top: -60px;
+  outline: none;
+  border: none;
+  background-color: whitesmoke;
+}
+.save {
+  display: block;
+  visibility: hidden;
+  position: static;
+  cursor: pointer;
+  float: right;
+  margin-right: 55%;
+  margin-top: -62px;
+  outline: none;
+  border: none;
+  background-color: whitesmoke;
+}
+
+.change2 {
+  display: block;
+  position: static;
+  cursor: pointer;
+  float: right;
+  margin-right: 60%;
+  margin-top: 50px;
+  outline: none;
+  border: none;
+  background-color: whitesmoke;
+}
+.save2 {
+  display: block;
+  visibility: hidden;
+  position: static;
+  cursor: pointer;
+  float: right;
+  margin-right: 55%;
+  margin-top: -62px;
+  outline: none;
+  border: none;
+  background-color: whitesmoke;
+}
+
+.change3 {
+  display: block;
+  position: static;
+  cursor: pointer;
+  float: right;
+  margin-right: 60%;
+  margin-top: -120px;
+  outline: none;
+  border: none;
+  background-color: whitesmoke;
+}
+.save3 {
+  display: block;
+  visibility: hidden;
+  position: static;
+  cursor: pointer;
+  float: right;
+  margin-right: 55%;
+  margin-top: -122px;
+  outline: none;
+  border: none;
+  background-color: whitesmoke;
+}
+
+.item3 {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.item4 {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+}
+
+.item5 {
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
+}
+
+.item6 {
+  display: inline;
+  grid-column: 1 / 2;
+  grid-row: 6 / 7;
+}
+.act {
+  margin: 8px;
+}
+.radio_shape {
+  position: static;
+  display: inline-flex;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 5px;
+  margin-left: -5%;
+  color: orange;
+}
+.radio_shape input.act {
+  vertical-align: auto;
+  width: 16px;
+  height: 16px;
+  padding: 5px;
+}
+
+.radio_shape2 {
+  position: static;
+  display: inline-table;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 5px;
+  margin-left: -5%;
+  color: orange;
+}
+
+.radio_shape2 input.act {
+  vertical-align: auto;
+  width: 16px;
+  height: 16px;
+  padding: 5px;
+}
+
+.item7 {
+  display: inline;
+  grid-column: 1 / 2;
+  grid-row: 7 / 8;
+  margin-bottom: -10px;
+}
+#now_act {
+  position: static;
+  display: inline-flex;
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: -10%;
+}
+#act_btn {
+  margin-top: -70px;
+}
+#act_ch {
+  margin-top: -70px;
+}
+
+.item8 {
+  grid-column: 1 / 2;
+  grid-row: 8 / 9;
+}
+
+.item9 {
+  grid-column: 1 / 2;
+  grid-row: 9 / 10;
+}
+
+.item10 {
+  grid-column: 1 / 2;
+  grid-row: 10 / 11;
+  margin-bottom: 10%;
+}

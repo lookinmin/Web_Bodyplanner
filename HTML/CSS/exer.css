@@ -1,0 +1,402 @@
+.whole {
+  position: relative;
+  margin-top: -30px;
+}
+
+body {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 800px 1300px 200px;
+  justify-content: center;
+  background-image: url("../images/exercise.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-color: whitesmoke;
+}
+
+.main_item1 {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 550px 50px;
+  justify-content: center;
+}
+
+.item1 {
+  /*영상*/
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.item2 {
+  /*title*/
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.item3 {
+  /*하이퍼링크*/
+  display: flex;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin: -20px auto;
+}
+/*---------------------------main_item1-------------------------*/
+
+.main_item2 {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px 200px 750px 200px;
+  justify-content: center;
+}
+
+.item4 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.item5 {
+  /*활성근*/
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.item6 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin: 0 auto;
+}
+
+.item7 {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+/*---------------------------main_item2-------------------------*/
+.main_item3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#muscle_pic {
+  position: relative;
+  width: 700px;
+  height: 700px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#title_recommend {
+  position: relative;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  color: orange;
+}
+
+#recommend {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  text-align: center;
+  color: orange;
+}
+
+#title_kinds {
+  position: relative;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  color: orange;
+}
+
+#kinds {
+  font-size: 18px;
+  text-align: center;
+  width: max-content;
+  margin: 0 auto;
+  color: orange;
+}
+
+#youtube {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  width: 890px;
+  height: 500px;
+}
+
+#title_Exer_eng {
+  position: relative;
+  font-size: 55px;
+  font-weight: bold;
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+  color: orange;
+  animation-name: tracking-in-contract-bck;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-direction: alternate;
+}
+#title_Exer_eng:hover {
+  animation-name: tracking-in-contract-bck;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+.tracking-in-contract-bck {
+  animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+}
+@keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(400px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+#video_title {
+  display: flex;
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#target_url {
+  color: orange;
+}
+
+#startpage_img {
+  display: flex;
+  position: relative;
+}
+
+.exit_btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: 250px;
+  margin-right: -20px;
+}
+.exit_btn2 {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: 160px;
+  margin-top: -30px;
+}
+
+.ul_exer {
+  margin: 50px 50px;
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.ul_exer:hover {
+  transition: 1s;
+  cursor: pointer;
+  color: #01ffff;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #01ffff;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: grey;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 50px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 16px;
+  right: 25px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.closebtn:hover {
+  cursor: pointer;
+}
+
+.division {
+  font-size: 20px;
+  font-weight: 500;
+  color: #01ffff;
+}
+
+.back_list {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 180px;
+  background-color: #1e1f21;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+
+.back {
+  margin-left: -35px;
+}
+
+.chest {
+  margin-left: -35px;
+}
+
+.leg {
+  margin-left: -40px;
+}
+
+.shoulder {
+  margin-left: -48px;
+}
+
+.arm {
+  margin-left: -43px;
+}
+
+.abs {
+  margin-left: -40px;
+}
+
+.oxy {
+  margin-left: -30px;
+}
+
+.chest_list {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 180px;
+  background-color: #1e1f21;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+.leg_list {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 180px;
+  background-color: #1e1f21;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+.shoulder_list {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 180px;
+  background-color: #1e1f21;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+.arm_list {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 180px;
+  background-color: #1e1f21;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+.abs_list {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 180px;
+  background-color: #1e1f21;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+.oxy_list {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 180px;
+  background-color: #1e1f21;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+
+.food_ul {
+  margin: 50px 50px;
+  color: white;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.food_ul:hover {
+  transition: 1s;
+  cursor: pointer;
+  color: #01ffff;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #01ffff;
+}

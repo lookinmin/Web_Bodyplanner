@@ -1,74 +1,176 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+  integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+  integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+  crossorigin="anonymous"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>회원가입</title>
   <link href="CSS/members.css" rel = "stylesheet">
 </head>
 <body>
-  <div id="members">
-    <h2 id="line1"><strong><회원 가입></strong></h2>     
-    <br>
-    <form name="options" id="list_menu" action ="">
-      <div class = "type_as">
-        <label class="li1">ID</label>
-        <span class = "int_id">
-          <input type = "text" id = "id" class ="int" maxlength="20" required> 
-        </span>
-        <button id ="overlap" value="overlap" type="submit">중복확인</button>
-      </div>
-      
+  
 
-      <div class = "type_as">
-        <label class="li1">PASSWORD</label>
-        <span class = "int_id">
-          <input type = "password" id = "pw" class ="int" maxlength="20" required> 
-        </span>
-      </div>
-      
-      <div class = "type_as">
-        <label class="li1">E-MAIL</label>
-        <span class = "int_id">
-          <input type = "email" id = "email" class ="int" maxlength="40" required> 
-        </span>
-      </div>
-      
-      <div class = "type_as">
-        <label class="li1">NICKNAME</label>
-        <span class = "int_id">
-          <input type = "text" id = "nickname" class ="int" maxlength="20" required> 
-        </span>
-      </div>
-
-      <div class = "type_as">
-        <label class="li2">카카오톡 수신동의</label><br>
-        <p id="info1">(식단 설정 후, 매일 식단을 보내드립니다.)</p><br>
-        <span>
-          <div class = "radio_shape">
-            <input type="radio" value="okay" name="permission" checked required>동의
-            <input type="radio" value="no" name="permission">거절
+  <div class="members">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" id="myCarousel"
+      data-bs-interval="false" data-bs-touch="true">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div id="members">
+            <h2 id="line1"><strong><회원 가입></strong></h2>     
+            <br>
+            <form name="options" id="list_menu" action ="">
+              <div class = "type_as">
+                <label class="li1">ID</label>
+                <span class = "int_id">
+                  <input type = "text" id = "id" class ="int" maxlength="20" required> 
+                </span>
+                <button type="overlap" id="overlap" class="btn btn-secondary" type ="submit">중복확인</button>
+              </div>
+              
+        
+              <div class = "type_as">
+                <label class="li1">PASSWORD</label>
+                <span class = "int_id">
+                  <input type = "password" id = "pw" class ="int" maxlength="20" required> 
+                </span>
+              </div>
+              
+              <div class = "type_as">
+                <label class="li1">E-MAIL</label>
+                <span class = "int_id">
+                  <input type = "email" id = "email" class ="int" maxlength="40" required> 
+                </span>
+              </div>
+              
+              <div class = "type_as">
+                <label class="li1">NICKNAME</label>
+                <span class = "int_id">
+                  <input type = "text" id = "nickname" class ="int" maxlength="20" required> 
+                </span>
+              </div>
+        
+              <div class = "type_as">
+                <label class="li2">카카오톡 수신동의</label><br>
+                <p id="info1">(식단 설정 후, 매일 식단을 보내드립니다.)</p><br>
+                <span>
+                  <div class = "radio_shape">
+                    <input type="radio" value="okay" name="permission" checked required>동의
+                    <input type="radio" value="no" name="permission">거절
+                  </div>
+                </span>
+              </div>
+        
+              <div class = "type_as">
+                <label class="li1">Phone Number</label><br>
+                <p id="info2">( ㅡ 없이 입력)</p>
+                <span class = "int_id">
+                  <input type = "tel" id = "tel" class ="int" maxlength="20"> 
+                </span>
+              </div>   
+            </form action>
           </div>
-        </span>
+        </div>
+
+        <div class="carousel-item"id="second">
+          <div id="whole">
+            <h2 id="member_info"><strong><사용자 정보입력></strong></h2><br>
+            <div class="info">
+              <p class="option">나이(Age) : </p>
+              <div class ="input_box">
+                <input type="number" min="1" id="age" value="age">
+              </div>
+            </div> 
+        
+            <div class="info">
+              <p class="option">키(Height) : </p>
+              <div class ="input_box">
+                <input type="number" min="120" id="Height" value="Height">
+              </div>
+            </div> 
+        
+            <div class="info">
+              <p class="option">체중(Weight) : </p>
+              <div class ="input_box">
+                <input type="number" min="10" id="Weight" value="Weight">
+              </div>
+            </div> 
+        
+            <div class="info">
+              <p class="option">성별(Sex) :<span> <div class = "radio_shape">
+                <input type="radio" value="male" name="gender" class = "act">남자
+                <input type="radio" value="female" name="gender" class = "act">여자
+              </div></span> 
+              </p>
+            </div>
+            
+            <div class="info">
+              <p class="option">활동량 : </p>
+              <span>
+                <div class = "radio_shape">
+                  <input type="radio" value="act1" name="activity" class="act"> 평소에 운동을 전혀 하지않음 <br>
+                  <input type="radio" value="act2" name="activity" class="act"> 주 1~2회 정도 가벼운 운동 <br>
+                  <input type="radio" value="act3" name="activity" class="act"> 주 3~4회 정도 적당한 운동 <br>
+                  <input type="radio" value="act4" name="activity" class="act"> 주 5~6회 정도 고강도 운동 <br>
+                  <input type="radio" value="act5" name="activity" class="act"> 아마추어 및 프로 선수 <br>
+                </div>
+              </span>
+            </div>
+        
+            <div class="info">
+              <p class="option">운동 목표 : </p>
+              <span>
+                <div class = "radio_shape">
+                  <input type="radio" value="diet" name="goal" class="act"> 다이어트 <br>
+                  <input type="radio" value="massup" name="goal" class="act"> 린매쓰업 <br>
+                  <input type="radio" value="bulk" name="goal" class="act"> 벌크업 <br>
+                </div>
+              </span>
+            </div>
+            <div align="right">
+              <button type="btn_complete" id="btn_complete" value="complete" type="submit" class="btn btn-secondary">가입 완료</button>
+            </div>
+          </div>
+          
+
+
+        </div>
       </div>
-
-      <div class = "type_as">
-        <label class="li1">Phone Number</label><br>
-        <p id="info2">( ㅡ 없이 입력)</p>
-        <span class = "int_id">
-          <input type = "tel" id = "tel" class ="int" maxlength="20"> 
-        </span>
-      </div>   
-
-      <input type="button" type="submit" value="NEXT" id="next" title="신체정보기입 및 대사량측정" required>
-    </form action>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" id="left">
+        <span class="carousel-control-prev-icon" aria-hidden="true"><img src="images/prev.png" width="30px"
+            height="auto"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" id="right">
+        <span class="carousel-control-next-icon" aria-hidden="true"><img src="images/next.png" width="30px"
+            height="auto"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </div>
-  <script src="JS/SignUp1.js"></script>
+  <script src="JS/SignUp.js"></script>
   <script>
-    next.addEventListener("click", function(){
-        location.href="members2.html";
-    });
+    let next = document.getElementById("next");
+    let id = document.getElementById("id");
+    let pw = document.getElementById("pw");
+    let email = document.getElementById("email");
+    let nickname = document.getElementById("nickname");
+    let tel = document.getElementById("tel");
   </script>
 </body>
 </html>
+
+
+

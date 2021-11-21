@@ -1,14 +1,30 @@
 #members {
   display: grid;
   margin: 0 auto;
+  margin-top: 30px;
   position: relative;
   width: max-content;
+  height: 100%;
+}
+@font-face {
+  font-family: "SEBANG_Gothic_Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+#second {
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative;
   height: 100%;
 }
 
 #line1 {
   font-size: 25px;
   text-align: center;
+  font-family: "SEBANG_Gothic_Bold";
 }
 
 #list_menu {
@@ -30,29 +46,12 @@
 }
 
 #overlap {
-  display: block;
-  background-color: aliceblue;
   font-size: 12px;
-  border: steelblue;
-  border-style: solid;
-  border-radius: 10%;
+  font-weight: 350;
   position: relative;
   margin: 5px 0px 0px 10px;
   float: right;
-}
-
-#next {
-  display: block;
-  background-color: aliceblue;
-  border: steelblue;
-  border-style: solid;
-  border-radius: 15%;
-  width: 80px;
-  height: 40px;
-  font-size: 14px;
-  font-weight: 600;
-  position: relative;
-  float: right;
+  font-family: "SEBANG_Gothic_Bold";
 }
 
 .li1 {
@@ -60,6 +59,7 @@
   margin: 15px 0 8px;
   font-weight: 600;
   text-align: left;
+  font-family: "SEBANG_Gothic_Bold";
 }
 
 .li2 {
@@ -68,10 +68,12 @@
   font-weight: 600;
   text-align: left;
   padding-bottom: 20px;
+  font-family: "SEBANG_Gothic_Bold";
 }
 
 .type_as {
   margin: 20px 0px 20px;
+  font-family: "SEBANG_Gothic_Bold";
 }
 
 .int_id {
@@ -83,6 +85,7 @@
   box-sizing: border-box;
   background: #fff;
   position: relative;
+  font-family: "SEBANG_Gothic_Bold";
 }
 
 .int {
@@ -101,4 +104,101 @@
   font-weight: 600;
   padding: 10px;
   margin-top: -15px;
+}
+#whole {
+  display: grid;
+  margin: 0 auto;
+  position: relative;
+  width: max-content;
+  height: 100%;
+}
+
+#member_info {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: -10px;
+  font-family: "SEBANG_Gothic_Bold";
+}
+
+#age {
+  display: inline-flex;
+  width: 100px;
+  height: auto;
+  font-size: 20px;
+  position: relative;
+}
+#Height {
+  display: inline-flex;
+  width: 100px;
+  height: auto;
+  font-size: 20px;
+  position: relative;
+}
+#Weight {
+  display: inline-flex;
+  width: 100px;
+  height: auto;
+  font-size: 20px;
+  position: relative;
+}
+
+.act {
+  padding: 10px;
+  margin: 10px;
+}
+
+.info {
+  display: inline-flex;
+  margin: 10px 0px 0px;
+  padding: 10px;
+  font-family: "SEBANG_Gothic_Bold";
+}
+
+.input_box {
+  padding: auto 10px 10px auto;
+  margin: 20px 10px 10px auto;
+}
+
+.option {
+  font-size: 23px;
+  margin: 15px 15px 8px;
+  font-weight: 550;
+  text-align: left;
+}
+
+.radio_shape {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.radio_shape input.act {
+  vertical-align: auto;
+  width: 18px;
+  height: 18px;
+  padding: 0px;
+}
+
+#btn_complete {
+  font-size: 15px;
+  width: 100px;
+  height: 40px;
+  position: relative;
+  margin: 5px 0px 0px 10px;
+  float: right;
+  font-family: "SEBANG_Gothic_Bold";
+}
+
+#act_change {
+  display: block;
+  position: relative;
+  justify-content: center;
+  left: 45%;
+  margin-top: 10%;
+  font-size: 20px;
+  border: aliceblue;
+  border-width: 3px;
+  border-style: groove;
+  background-color: whitesmoke;
 }

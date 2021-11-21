@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "SEBANG_Gothic_Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .whole {
   position: relative;
   margin-top: -30px;
@@ -15,7 +23,6 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 800px 1300px 200px;
   justify-content: center;
-  background-image: url("../images/exercise.png");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -72,19 +79,20 @@ body {
 }
 
 .item4 {
+  font-weight: bold;
   grid-row-start: 1;
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 2;
 }
 
-.item5 {
-  /*활성근*/
+/* .item5 {
+  font-weight: bold;
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 2;
-}
+} */
 
 .item6 {
   grid-row-start: 3;
@@ -118,35 +126,40 @@ body {
 }
 
 #title_recommend {
+  font-family: "SEBANG_Gothic_Bold";
   position: relative;
   font-size: 30px;
-  font-weight: 500;
+  font-weight: bold;
   text-align: center;
-  color: orange;
+  color: black;
 }
 
 #recommend {
+  font-family: "SEBANG_Gothic_Bold";
   position: relative;
   text-align: center;
+  font-weight: bold;
   font-size: 18px;
   text-align: center;
-  color: orange;
+  color: black;
 }
 
 #title_kinds {
+  font-family: "SEBANG_Gothic_Bold";
   position: relative;
   font-size: 30px;
-  font-weight: 500;
+  font-weight: bold;
   text-align: center;
-  color: orange;
+  color: black;
 }
 
 #kinds {
+  font-family: "SEBANG_Gothic_Bold";
   font-size: 18px;
   text-align: center;
   width: max-content;
   margin: 0 auto;
-  color: orange;
+  color: black;
 }
 
 #youtube {

@@ -4,7 +4,9 @@ body {
 
 #main_pic {
   height: 700px;
-  border: 2px solid red;
+  width: 100%;
+  border: 2px solid orange;
+  border-radius: 15px;
   margin-bottom: 80px;
 }
 

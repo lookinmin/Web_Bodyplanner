@@ -24,9 +24,9 @@ body {
   grid-template-rows: 800px 1300px 200px;
   justify-content: center;
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  background-color: whitesmoke;
+  background-image: url("../images/exerbackground.png");
+  background-size: contain;
+  background-position: center;
 }
 
 .main_item1 {
@@ -38,6 +38,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 150px 550px 50px;
   justify-content: center;
+  padding-top: 40px;
 }
 
 .item1 {
@@ -74,7 +75,7 @@ body {
   grid-row-start: 2;
   grid-row-end: 3;
   grid-template-columns: 1fr;
-  grid-template-rows: 200px 200px 750px 200px;
+  grid-template-rows: 200px 750px 200px;
   justify-content: center;
 }
 
@@ -86,25 +87,18 @@ body {
   grid-column-end: 2;
 }
 
-/* .item5 {
-  font-weight: bold;
+.item6 {
+  display: grid;
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 2;
-} */
-
-.item6 {
-  grid-row-start: 3;
-  grid-row-end: 4;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  margin: 0 auto;
+  height: auto;
 }
 
 .item7 {
-  grid-row-start: 4;
-  grid-row-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: 2;
 }
@@ -120,9 +114,12 @@ body {
 #muscle_pic {
   position: relative;
   width: 700px;
-  height: 700px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  height: 550px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 2px solid #fc0;
+  border-radius: 25%;
+  margin: 0 auto;
 }
 
 #title_recommend {
